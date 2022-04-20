@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1.25em;
+  background-color: hsl(222, 26%, 31%);
+}
+
+* {
+  font-family: "League Spartan", sans-serif;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1em;
+}
+
+.calc-name {
+  display: grid;
+  grid-template-columns: auto auto;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.calc-name h3 {
+  text-align: right;
+}
+
+.result {
+  text-align: right;
+  padding: 0.75em 0.6em;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  border-radius: 0.5em;
+}
+
+.calc-btns {
+  display: grid;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 1rem;
+  gap: 0.5em;
+  padding: 1.25em;
+}
+
+.calc-btns div {
+  display: grid;
+  grid-template-columns: 3.8rem 3.8rem 3.8rem 3.8rem;
+  grid-template-rows: auto auto auto auto auto;
+  row-gap: 0.15rem;
+  justify-content: space-between;
+}
+
+.calc-btns div button {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0 4px hsl(28, 16%, 65%);
+  border: 0;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.calc-btns div:nth-child(5) {
+  grid-template-columns: 8.75rem 8.75rem;
+}
+
+button.style-btn1 {
+  background: hsl(225, 21%, 49%) !important;
+  box-shadow: 0 4px hsl(224, 28%, 35%) !important;
+  color: #fff;
+}
+
+button.style-btn2 {
+  background: hsl(6, 63%, 50%) !important;
+  box-shadow: 0 4px hsl(6, 70%, 34%) !important;
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .calculator {
+    width: 25rem;
+    margin: 15rem auto;
+  }
+
+  .calc-btns div {
+    grid-template-columns: 5rem 5rem 5rem 5rem;
+  }
+
+  .calc-btns div:nth-child(5) {
+    grid-template-columns: 10.75rem 10.75rem;
+  }
+}
